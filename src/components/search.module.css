@@ -1,0 +1,32 @@
+.searchContainer {
+    margin: 20px auto;
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid #a8a8a8;
+    padding: 10px 20px;
+    width: 70%;
+    font-size: 22px;
+    color: #393e46;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.btn {
+    background-color: #29bb89;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+}
