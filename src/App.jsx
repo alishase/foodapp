@@ -8,19 +8,28 @@ import FoodDetails from "./components/FoodDetails";
 function App() {
     const [foodData, setFoodData] = useState([]);
     const [foodId, setFoodId] = useState("631814");
-
+    const [opened, setOpened] = useState(true);
     return (
-        <>
-            <Nav />
-            <Search foodData={foodData} setFoodData={setFoodData} />
+        <div className="project">
+            <Nav opened={opened} setOpened={setOpened} />
+            <Search
+                foodData={foodData}
+                setFoodData={setFoodData}
+                setOpened={setOpened}
+            />
             {/* {console.log(foodData)} */}
             <div className="container">
-                <FoodList setFoodId={setFoodId} foodData={foodData} />
+                <FoodList
+                    setFoodId={setFoodId}
+                    foodData={foodData}
+                    opened={opened}
+                    setOpened={setOpened}
+                />
                 <div className="details">
                     <FoodDetails foodId={foodId} />
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

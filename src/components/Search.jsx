@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import styles from "./search.module.css";
 
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
-const API_KEY = "bd2d27e28e324ac48581ac778e556424";
+const API_KEY = "88a373fbb02e4614915e6899ce963276";
 
-export default function Search({ foodData, setFoodData }) {
+export default function Search({ foodData, setFoodData, setOpened }) {
     const [query, setQuery] = useState("burger");
     const [search, setSearch] = useState(0);
+
     useEffect(() => {
         async function fetchFood() {
             const res = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
@@ -24,7 +25,10 @@ export default function Search({ foodData, setFoodData }) {
                 className={styles.input}
             />
             <button
-                onClick={() => setSearch(search + 1)}
+                onClick={() => {
+                    setSearch(search + 1);
+                    setOpened(true);
+                }}
                 className={styles.btn}
             >
                 Search

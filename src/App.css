@@ -1,13 +1,17 @@
+html,
 body {
     margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
+    width: inherit;
+    height: inherit;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    width: 100%;
 }
 
 /* .container *:nth-child(2) {
@@ -15,7 +19,17 @@ body {
 } */
 
 .details {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.project {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    html {
+        max-width: 767px;
+    }
 }

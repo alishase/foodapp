@@ -1,6 +1,6 @@
 import styles from "./fooditem.module.css";
 
-export default function FoodItem({ food, setFoodId }) {
+export default function FoodItem({ food, setFoodId, setOpened }) {
     return (
         <div className={styles.itemContainer}>
             <img
@@ -14,7 +14,9 @@ export default function FoodItem({ food, setFoodId }) {
             <button
                 onClick={() => {
                     console.log(food.id);
+                    setOpened(false);
                     setFoodId(food.id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className={styles.itemBtn}
             >
