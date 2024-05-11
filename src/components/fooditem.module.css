@@ -43,7 +43,7 @@
     width: 100%;
     background-color: #d7d7d7;
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
@@ -56,5 +56,9 @@
     .itemContainer {
         margin: 30px 0px;
         background-color: #fff;
+    }
+
+    .mobile {
+        display: flex;
     }
 }
