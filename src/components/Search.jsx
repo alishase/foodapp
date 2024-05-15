@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./search.module.css";
 
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
-const API_KEY = "88a373fbb02e4614915e6899ce963276";
+const API_KEY = "2c718436419c4226b980ce1832877b09";
 
 export default function Search({ foodData, setFoodData, setOpened }) {
     const [query, setQuery] = useState("burger");
